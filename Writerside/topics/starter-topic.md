@@ -1,12 +1,61 @@
 # Codigo para annotaciones
 
+Mejorar blockquote
+
 ## Regex
 
-Buscar "[  ]".
+Para Buscar...
 
-```regex
-\s?\[.*?\]\.?
-```
+<tabs>
+<tab title="[x]">
+<code-block lang="regex">
+\[(?!…).+?\]
+</code-block>
+</tab>
+<tab title="id=x">
+<code-block lang="regex">
+\s+id=\"[^\"]+\"
+</code-block>
+</tab>
+<tab title="type=x">
+<code-block lang="regex">
+\s+type=\"[^\"]+\"
+</code-block>
+</tab>
+<tab title="Espacios en blanco">
+<code-block lang="regex">
+(?:\u00A0|\u200C|\u200D|\u2002|\u2003|\u2009|\u200B)
+</code-block>
+</tab>
+</tabs>
+## Templates
+
+<tabs>
+<tab title="Anotaciones">
+<code-block lang="html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0" name="viewport"&gt;
+  &lt;title&gt;Titulo&lt;/title&gt;
+  &lt;meta content="AutorNombre" name="author"&gt;
+  &lt;meta content="cat1, cat2" name="keywords"&gt;
+  &lt;link href="../../css/style.css" rel="stylesheet"&gt;
+  &lt;link href="../../css/notes.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="cover"&gt;
+  &lt;img alt="" src="../../img/notes/bookcovers/cover.jpg"/&gt;
+&lt;/div&gt;
+&lt;h1&gt;PrimerTitulo&lt;/h1&gt;
+&lt;p&gt;Texto&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code-block>
+</tab>
+
+</tabs>
 
 ## Cover portada
 
