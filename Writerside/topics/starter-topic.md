@@ -2,6 +2,17 @@
 
 Mejorar blockquote
 
+## Usar Mermaid.js
+
+Colocar antes de terminar el body
+
+```html
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+</script>
+```
+
 ## Regex
 
 Para Buscar...
@@ -28,6 +39,7 @@ Para Buscar...
 </code-block>
 </tab>
 </tabs>
+
 ## Templates
 
 <tabs>

@@ -1,7 +1,7 @@
 /*
 Códigos especiales para las anotaciones
  */
-@import "notes/highlitghts.css";
+@import "notes/highlights.css";
 
 /* Corrige el ancho de los diagramas */
 .mermaid svg {
@@ -237,6 +237,23 @@ h6:before {
   font-style: italic;
   text-align: left;
   margin-bottom: 15px;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure footer {
+  font-size: 0.9em;
+  margin-top: 0.5em;
 }
 
 /* Footer personalizado para figura e imágenes en general */
