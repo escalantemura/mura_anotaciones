@@ -1,4 +1,19 @@
 /* Subrayado de nivel 1 (menor importancia) */
-.highlight1 {
+mark.highlight1 {
   background: #FFF3A3A6;
+}
+
+/* Subrayado de nivel 2 (importancia un poco mayor) */
+mark.highlight2 {
+  background: #BBFABBA6;
+}
+
+/* Subrayado de nivel 3 (importancia mayor) */
+mark.highlight2 {
+  background: #2D30F3A6;
+}
+
+/* Subrayado de nivel 4 (importancia máxima) */
+mark.highlight4 {
+  background: #FF5582A6;
 }

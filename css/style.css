@@ -1,31 +1,3 @@
-/*
-ESTILOS GLOBALES
- */
+/* ESTILOS GLOBALES */
 @import "html5boilerplate.css";
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 0;
-  background-color: #1E1E1E;
-  color: #E0E0E0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.cover {
-  padding: 60px;
-  box-sizing: border-box;
-}
-p {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 1em;
-  margin-left: auto;
-  margin-right: auto;
-}
+@import "disenhoImpresion.css";

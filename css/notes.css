@@ -1,270 +1,31 @@
-/*
-Códigos especiales para las anotaciones
- */
+/* Códigos especiales para las anotaciones */
 @import "notes/highlights.css";
+@import "notes/multimedia.css";
+@import "notes/temaColores.css";
+@import "notes/tablas.css";
+@import "notes/infoboxes.css";
+@import "notes/numeracionAuto.css";
 
-/* Corrige el ancho de los diagramas */
-.mermaid svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-/* Formato de las tablas */
-/* Configuración general */
-table {
-  width: 100%;
-  height: 100%;
-}
-
-th {
-  text-align: center;
-}
-
-table, th, td {
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px;
-}
-
-/* Colores para el Tema Claro */
-.normal th {
-  background-color: #f2f2f2;
-}
-
-.normal tr:nth-child(even) {
-  background-color: #f1f1f1;
-}
-
-tr:hover, .normal tr:nth-child(even):hover {
-  background-color: #bebebe;
-}
-
-table, th, td {
-  border: 1px solid rgb(123, 115, 115);
-}
-
-th, td {
-  border: 1px solid #dddddd;
-}
-
-/* Color para el Tema Oscuro */
-@media (prefers-color-scheme: dark) {
-  .normal th {
-    background-color: #333;
-  }
-
-  .normal tr:nth-child(even) {
-    background-color: #222;
-  }
-
-  tr:hover, .normal tr:nth-child(even):hover {
-    background-color: #555;
-  }
-
-  table, th, td {
-    border: 1px solid #444;
-  }
-
-  th, td {
-    border: 1px solid #444;
-  }
-}
-
-/* Tabla sin bordes */
-.no-border, .no-border th, .no-border td {
-  border: none;
-}
-
-.no-border {
-  border-spacing: 0;
-}
-
-/* Infoboxes */
-/* Configuración general */
-.infobox {
-  border-spacing: 0;
-  color: white;
-}
-
-.infobox, .infobox tr, .infobox th, .infobox td {
-  border: none;
-}
-
-.infobox td {
-  padding: 0.1em 3em 2em 0;
-  text-align: justify;
-}
-
-.infobox td[rowspan] {
-  width: 50px;
-  padding: 1.5em 1em 0 1em;
-  vertical-align: top;
-}
-
-.infobox th {
-  padding: 1.5em 2.5em 0.5em 0;
-  text-align: left;
-  font-weight: bold;
-}
-
-/* Infobox check */
-.infobox.check tr {
-  background-color: #2b3b44;
-}
-
-.infobox.check .icono::before {
-  content: "✅";
-}
-
-/* Infobox important */
-.infobox.important tr {
-  background-color: #4d4039;
-}
-
-.infobox.important .icono::before {
-  content: "💡";
-}
-
-/* Infobox remark */
-.infobox.remark tr {
-  background-color: #405047;
-}
-
-.infobox.remark .icono::before {
-  content: "🔥";
-}
-
-/* Código para el numerado automático de los headings */
 body {
-  counter-reset: level1Header;
-  counter-reset: figura;
-  counter-reset: tabla;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #1E1E1E;
+  color: #E0E0E0;
 }
 
-h1 {
-  counter-reset: level2Header;
-  text-align: center;
-  break-before: page;
-}
-
-h2 {
-  counter-reset: level3Header;
-}
-
-h3 {
-  counter-reset: level4Header;
-}
-
-h4 {
-  counter-reset: level5Header;
-}
-
-h5 {
-  counter-reset: level6Header;
-}
-
-h1:before {
-  counter-increment: level1Header;
-  content: counter(level1Header, upper-roman) ". ";
-}
-
-/* Añade un espacio para h1 en la conversión/impresión */
-@media print {
-  h1:before {
-    display: block;
-    margin-top: 150px;
-  }
-}
-
-h2:before {
-  counter-increment: level2Header;
-  content: counter(level2Header) ". ";
-}
-
-h3:before {
-  counter-increment: level3Header;
-  content: counter(level2Header) "." counter(level3Header) ". ";
-}
-
-h4:before {
-  counter-increment: level4Header;
-  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) ". ";
-}
-
-h5:before {
-  counter-increment: level5Header;
-  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) "." counter(level5Header) ". ";
-}
-
-h6:before {
-  counter-increment: level6Header;
-  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) "." counter(level5Header) "." counter(level6Header) ". ";
-}
-
-/* Estilo para la clase "tabla" que incrementa y muestra el contador */
-.tabla::before {
-  counter-increment: tabla;
-  content: "Tabla " counter(tabla);
-  display: block;
-  font-weight: bold;
-  font-style: normal;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.tabla {
-  font-style: italic;
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-/* Estilo para la clase "figura" que incrementa y muestra el contador */
-.figura::before {
-  counter-increment: figura;
-  content: "Figura " counter(figura);
-  display: block;
-  font-weight: bold;
-  font-style: normal;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.figura {
-  font-style: italic;
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-figure {
-  margin: 1em 0;
-}
-
-figure img {
+img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
-}
-
-figure footer {
-  font-size: 0.9em;
-  margin-top: 0.5em;
-}
-
-/* Footer personalizado para figura e imágenes en general */
-.footer {
-  width: 100%;
-  padding: 1rem;
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  font-style: italic;
-  position: relative;
-  bottom: 0;
-  left: 0;
 }

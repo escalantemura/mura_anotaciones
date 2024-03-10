@@ -1,0 +1,56 @@
+/* Configuración general */
+.infobox {
+  border-spacing: 0;
+  color: white;
+}
+
+.infobox,
+.infobox tr,
+.infobox th,
+.infobox td {
+  border: none;
+}
+
+.infobox td {
+  padding: 0.1em 3em 2em 0;
+  text-align: justify;
+}
+
+.infobox td[rowspan] {
+  width: 50px;
+  padding: 1.5em 1em 0 1em;
+  vertical-align: top;
+}
+
+.infobox th {
+  padding: 1.5em 2.5em 0.5em 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Infobox check */
+.infobox.check tr {
+  background-color: #2b3b44;
+}
+
+.infobox.check .icono::before {
+  content: "✅";
+}
+
+/* Infobox important */
+.infobox.important tr {
+  background-color: #4d4039;
+}
+
+.infobox.important .icono::before {
+  content: "💡";
+}
+
+/* Infobox remark */
+.infobox.remark tr {
+  background-color: #405047;
+}
+
+.infobox.remark .icono::before {
+  content: "🔥";
+}

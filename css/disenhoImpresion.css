@@ -1,0 +1,8 @@
+/* Sirve para el diseño de impresión (por defecto: theme light) */
+/* Añade un espacio para h1 */
+@media print {
+  h1:before {
+    display: block;
+    margin-top: 150px;
+  }
+}

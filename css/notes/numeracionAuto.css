@@ -1,0 +1,58 @@
+/* Código para el numerado automático de los headings */
+
+body {
+  counter-reset: level1Header figura tabla;
+}
+
+h1 {
+  counter-reset: level2Header;
+  text-align: center;
+  break-before: page;
+}
+
+h2 {
+  counter-reset: level3Header;
+}
+
+h3 {
+  counter-reset: level4Header;
+}
+
+h4 {
+  counter-reset: level5Header;
+}
+
+h5 {
+  counter-reset: level6Header;
+}
+
+h1:before {
+  counter-increment: level1Header;
+  content: counter(level1Header, upper-roman) ". ";
+}
+
+h2:before {
+  counter-increment: level2Header;
+  content: counter(level2Header) ". ";
+}
+
+h3:before {
+  counter-increment: level3Header;
+  content: counter(level2Header) "." counter(level3Header) ". ";
+}
+
+h4:before {
+  counter-increment: level4Header;
+  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) ". ";
+}
+
+h5:before {
+  counter-increment: level5Header;
+  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) "." counter(level5Header) ". ";
+}
+
+h6:before {
+  counter-increment: level6Header;
+  content: counter(level2Header) "." counter(level3Header) "." counter(level4Header) "." counter(level5Header) "." counter(level6Header) ". ";
+}
+

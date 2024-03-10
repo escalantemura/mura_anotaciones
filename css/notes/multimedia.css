@@ -1,0 +1,87 @@
+/* Valores globales para Figure */
+figure {
+  margin: 1em 0;
+}
+
+figure footer {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  width: 100%;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+/* Corrige el ancho de los diagramas (global) */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* Estilo para la clase "cover" */
+figure.cover {
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+/* Estilo para la clase "tabla normal" */
+figure.tablap.normal::before {
+  counter-increment: tabla;
+  content: "Tabla " counter(tabla);
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+figure.tablap.normal table {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Estilo para la clase "tabla no-bordes" */
+figure.tablap.no-bordes,
+figure.tablap.no-bordes th,
+figure.tablap.no-bordes td {
+  border: none;
+}
+
+figure.tablap.no-bordes {
+  border-spacing: 0;
+}
+
+/* Estilo para la clase "figura" y "mermaid" */
+figure.figura::before,
+figure.mermaid-fig::before {
+  counter-increment: figura;
+  content: "Figura " counter(figura);
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+figure.figura figcaption,
+figure.mermaid-fig figcaption {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+figure.figura img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
