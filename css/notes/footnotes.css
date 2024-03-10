@@ -1,0 +1,42 @@
+a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+.contadorPienota::before {
+  content: counter(pienota);
+  counter-increment: pienota;
+  vertical-align: super;
+  font-size: smaller;
+}
+
+a:hover {
+  color: #581fd9;
+}
+
+aside.footnotes {
+  background-color: #1f1f1f;
+  border: 1px solid #3c3c3c;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+aside.footnotes ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+aside.footnotes li {
+  margin-bottom: 10px;
+}
+
+aside.footnotes a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+aside.footnotes a:hover {
+  color: #4d22ad;
+}

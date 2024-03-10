@@ -5,6 +5,7 @@
 @import "notes/tablas.css";
 @import "notes/infoboxes.css";
 @import "notes/numeracionAuto.css";
+@import "notes/footnotes.css";
 
 body {
   font-family: Arial, sans-serif;

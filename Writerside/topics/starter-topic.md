@@ -24,7 +24,7 @@ Para Buscar...
 </tab>
 <tab title="Espacios en blanco">
 <code-block lang="regex">
-(?:\u00A0|\u200C|\u200D|\u2002|\u2003|\u2009|\u200B)
+(?:\u00A0|\u200C|\u200D|\u2002|\u2003|\u2009|\u200B|\u00AD)
 </code-block>
 </tab>
 </tabs>
@@ -46,9 +46,9 @@ Para Buscar...
   &lt;link href="../../css/notes.css" rel="stylesheet"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div class="cover"&gt;
-  &lt;img alt="" src="../../img/notes/bookcovers/cover.jpg"/&gt;
-&lt;/div&gt;
+&lt;figure class="cover"&gt;
+  &lt;img alt="Portada" src="../../img/notes/bookcovers/cover"/&gt;
+&lt;/figure&gt;
 &lt;h1&gt;PrimerTitulo&lt;/h1&gt;
 &lt;p&gt;Texto&lt;/p&gt;
 &lt;/body&gt;

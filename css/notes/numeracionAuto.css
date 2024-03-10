@@ -1,7 +1,7 @@
 /* Código para el numerado automático de los headings */
 
 body {
-  counter-reset: level1Header figura tabla;
+  counter-reset: level1Header figura tabla pienota;
 }
 
 h1 {
