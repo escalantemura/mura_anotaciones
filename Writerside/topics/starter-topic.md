@@ -155,6 +155,31 @@ de la tabla. (usar footer para Totales).
 </tab>
 </tabs>
 
+## Notas
+
+Las notas se enumeran automáticamente. Reemplazar ref-id por el id de la nota (no debe ir enumerado, pero sí en orden).
+
+<tabs>
+<tab title="Nota inline">
+<code-block lang="html">
+&lt;a class="footnote-ref contadorPienota" href="#ref-id" role="doc-noteref"&gt;&lt;/a&gt;
+</code-block>
+</tab>
+<tab title="Seccion de notas">
+<code-block lang="html">
+&lt;aside class="footnotes"&gt;
+  &lt;ol&gt;
+    &lt;li id="ref-id"&gt;
+      &lt;p&gt;
+        Contenido.
+        &lt;a class="footnote-back" href="#ref-id" role="doc-backlink"&gt;↩︎&lt;/a&gt;
+      &lt;/p&gt;
+  &lt;/ol&gt;
+&lt;/aside&gt;
+</code-block>
+</tab>
+</tabs>
+
 ## Infoboxes
 
 <tabs>

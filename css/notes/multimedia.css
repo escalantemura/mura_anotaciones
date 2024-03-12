@@ -43,7 +43,6 @@ figure.tablap.normal::before {
 }
 
 figure.tablap.normal table {
-  font-style: italic;
   text-align: left;
   margin-bottom: 15px;
 }
