@@ -153,6 +153,19 @@ de la tabla. (usar footer para Totales).
 &lt;/figure&gt;
 </code-block>
 </tab>
+
+<tab title="Ecuacion">
+Ecuación a cuerpo completo.
+<code-block lang="html">
+&lt;figure class="ecuacion"&gt;
+  $$ecuacionEnLatex$$
+&lt;/figure&gt;
+</code-block>
+Ecuación inline (dentro de p).
+<code-block lang="html">
+&lt;span class="ecuacion-inline"&gt;\(ecuacionEnLatex\)&lt;/span&gt;
+</code-block>
+</tab>
 </tabs>
 
 ## Notas
