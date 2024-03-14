@@ -1,6 +1,8 @@
 /* Valores globales para Figure */
 figure {
   margin: 1em 0;
+  break-inside: avoid; /* Previene la división del contenido en páginas al imprimir */
+  page-break-inside: avoid; /* Para navegadores más antiguos */
 }
 
 figure footer {
@@ -8,8 +10,7 @@ figure footer {
   margin-top: 0.5em;
   width: 100%;
   padding: 1rem;
-  background-color: #222;
-  color: #fff;
+
   text-align: center;
   font-style: italic;
   position: relative;

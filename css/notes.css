@@ -6,6 +6,7 @@
 @import "notes/infoboxes.css";
 @import "notes/numeracionAuto.css";
 @import "notes/footnotes.css";
+@import "notes/printStyles.css";
 
 body {
   font-family: Arial, sans-serif;
