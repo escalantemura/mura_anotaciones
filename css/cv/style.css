@@ -1,0 +1,146 @@
+@import "../html5boilerplate.css";
+
+/* Define la fuente JetBrains Mono */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../fonts/JetBrainsMono-2/JetBrainsMono-Regular.ttf') format('ttf'),
+  url('../../fonts/JetBrainsMono-2/JetBrainsMono-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../fonts/JetBrainsMono-2/JetBrainsMono-Italic.ttf') format('ttf'),
+  url('../../fonts/JetBrainsMono-2/JetBrainsMono-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../fonts/JetBrainsMono-2/JetBrainsMono-Bold.ttf') format('ttf'),
+  url('../../fonts/JetBrainsMono-2/JetBrainsMono-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Aplica la fuente JetBrains Mono a los elementos que desees */
+body {
+  font-family: 'JetBrains Mono', monospace; /* Usa JetBrains Mono con un fallback monospace */
+  font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+}
+
+/* Estilos para la barra de progreso */
+.progress-bar {
+  width: 80%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Necesario para posicionar el texto */
+  margin: auto auto 0;
+}
+
+.progress-bar div {
+  height: 12px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  position: relative; /* Necesario para posicionar el texto */
+  font-weight: 900; /* Asegura que se usen los iconos sólidos */
+}
+
+.progress-bar div::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* progress bar levels */
+.level-1 {
+  width: 33%;
+  background-color: #4caf50;
+}
+
+.level-1::before {
+  content: "";
+}
+
+.level-2 {
+  width: 66%;
+  background-color: #2196f3;
+}
+
+.level-2::before {
+  content: "";
+}
+
+.level-3 {
+  width: 100%;
+  background-color: #f44336;
+}
+
+.level-3::before {
+  content: "";
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+td {
+  padding: 10px;
+  border: none;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* Estilos para el contenido dentro de td */
+.td-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px; /* Espacio entre los elementos */
+  height: 110px;
+  width: 120px;
+  justify-content: flex-start;
+}
+
+.td-content img {
+  display: block; /* Convierte la imagen en un elemento de bloque */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 30px; /* Ancho predeterminado */
+  height: 30px; /* Alto predeterminado */
+  object-fit: contain; /* Ajusta la imagen al tamaño sin deformarla */
+}
+
+.td-content h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.td-content h3 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 10px;
+  color: lightslategray;
+  margin-top: 0;
+  margin-bottom: 0;
+}
