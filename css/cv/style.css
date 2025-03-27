@@ -40,7 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Estilos para la barra de progreso */
 .progress-bar {
   width: 10px; /* Ancho de la barra vertical */
+  min-width: 10px;
   height: 80px; /* Altura de la barra vertical */
+  min-height: 80px;
   background-color: #f3f3f3;
   border-radius: 5px;
   overflow: hidden;
@@ -52,12 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress-bar div {
   width: 100%; /* Ancho del nivel */
-  text-align: center;
-  color: white;
   border-radius: 0; /* Elimina el borde redondeado */
   position: relative;
-  font-weight: 900;
-  transition: height 0.3s ease-in-out; /* Añade una transición suave */
 }
 
 .progress-bar div::before {
@@ -65,9 +63,6 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 /* progress bar levels */
@@ -141,14 +136,14 @@ td {
   object-fit: contain; /* Ajusta la imagen al tamaño sin deformarla */
 }
 
-.td-content h2 {
+.td-content h3 {
   text-align: center; /* Alinea el texto a la izquierda */
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.td-content h3 {
+.td-content p {
   font-weight: normal;
   font-style: italic;
   font-size: 10px;
@@ -156,4 +151,3 @@ td {
   margin-top: 0;
   margin-bottom: 0;
 }
-
