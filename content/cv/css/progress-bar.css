@@ -1,0 +1,44 @@
+
+/* Estilos para la barra de progreso */
+.progress-bar {
+  margin-top: 10px;
+  width: 10px; /* Ancho de la barra vertical */
+  min-width: 10px;
+  height: 10px; /* Altura de la barra vertical */
+  min-height: 60px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Necesario para posicionar el texto */
+  display: flex; /* Convierte la barra en un contenedor flex */
+  flex-direction: column-reverse; /* Invierte el orden de los elementos */
+}
+
+.progress-bar div {
+  width: 100%; /* Ancho del nivel */
+  border-radius: 0; /* Elimina el borde redondeado */
+  position: relative;
+}
+
+.progress-bar div::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* progress bar levels */
+.level-1 {
+  background-color: #4caf50;
+  height: 25%;
+}
+
+.level-2 {
+  background-color: #2196f3;
+  height: 50%;
+}
+
+.level-3 {
+  background-color: #f44336;
+  height: 100%;
+}

@@ -1,7 +1,4 @@
-// /Users/mura/PhpstormProjects/mura_anotaciones/content/cv/ProgressCellComponent.js
-
-// Importar los datos desde data.js
-import { dataAnalisis, dataOfimatica, dataDiseno, dataInterfaz, dataBackend } from './DataForTables.js';
+import {dataAnalisis, dataBackend, dataDiseno, dataInterfaz, dataOfimatica} from './DataForTables.js';
 
 class ProgressCell extends HTMLElement {
   connectedCallback() {
@@ -32,15 +29,32 @@ customElements.define("progress-cell", ProgressCell);
 function generateProgressTable(data, sectionTitle, sectionId) {
   const section = document.createElement("section");
   section.id = sectionId; // Asignar el ID a la sección
-  const h2 = document.createElement("h2");
-  h2.textContent = sectionTitle;
-  section.appendChild(h2);
+
+  // Crear el contenedor del sello
+  const selloContainer = document.createElement("div");
+  selloContainer.classList.add("sello-container");
+
+  // Crear la imagen del sello
+  const selloImg = document.createElement("img");
+  selloImg.src = "img/Sellorojo.png";
+  selloImg.alt = "sello";
+
+  // Crear el span para el texto
+  const selloSpan = document.createElement("span");
+  selloSpan.textContent = sectionTitle;
+
+  // Agregar la imagen y el span al contenedor del sello
+  selloContainer.appendChild(selloImg);
+  selloContainer.appendChild(selloSpan);
+
+  // Agregar el contenedor del sello a la sección
+  section.appendChild(selloContainer);
 
   const table = document.createElement("table");
-  const tr = document.createElement("tr");
+  table.classList.add("iconpresentator");
 
   data.forEach((item) => {
-    const td = document.createElement("td");
+    const trInside = document.createElement("tr");
     const progressCell = document.createElement("progress-cell");
     progressCell.setAttribute("img-src", item["img-src"]);
     progressCell.setAttribute("label", item.label);
@@ -48,21 +62,20 @@ function generateProgressTable(data, sectionTitle, sectionId) {
     if (item.bodyText) {
       progressCell.setAttribute("bodytext", item.bodyText);
     }
-    td.appendChild(progressCell);
-    tr.appendChild(td);
+    trInside.appendChild(progressCell);
+    table.appendChild(trInside);
   });
 
-  table.appendChild(tr);
   section.appendChild(table);
   return section;
 }
 
 // Generar la tabla
-const analisisSection = generateProgressTable(dataAnalisis, "Análisis de datos", "analisis-datos");
+const analisisSection = generateProgressTable(dataAnalisis, "Análisis", "analisis-datos");
 const ofimaticaSection = generateProgressTable(dataOfimatica, "Ofimática", "ofimatica");
-const disenoSection = generateProgressTable(dataDiseno, "Diseño gráfico y Estructura de documentos", "diseno");
-const interfazSection = generateProgressTable(dataInterfaz, "Interfaz de usuario (Frontend/ UI/UX)", "interfaz");
-const backendSection = generateProgressTable(dataBackend, "Informática (Backend/Business Logic)", "backend");
+const disenoSection = generateProgressTable(dataDiseno, "Diseño gráfico y de video", "diseno");
+const interfazSection = generateProgressTable(dataInterfaz, "Interfaces (Frontend)", "interfaz");
+const backendSection = generateProgressTable(dataBackend, "Algoritmia (Backend)", "backend");
 
 // Insertar la tabla en el body
 document.addEventListener('DOMContentLoaded', () => {
