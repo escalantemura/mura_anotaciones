@@ -8,11 +8,11 @@ class ProgressCell extends HTMLElement {
     const bodyText = this.getAttribute("bodytext");
 
     this.innerHTML = `
-      <div class="td-content">
+      <div class="icon-content">
         <div class="progress-bar">
           <div class="${level}"></div>
         </div>
-        <div class="td-content-text">
+        <div class="icon-content-text">
           <img alt="${labelText} Logo" src="img/${imgSrc}">
           <h3>${labelText}</h3>
           ${bodyText ? `<p>${bodyText}</p>` : ''}
@@ -27,12 +27,14 @@ customElements.define("progress-cell", ProgressCell);
 
 // Función para generar la tabla automáticamente
 function generateProgressTable(data, sectionTitle, sectionId) {
-  const section = document.createElement("section");
-  section.id = sectionId; // Asignar el ID a la sección
+  const mainDiv = document.createElement("div");
+  mainDiv.id = sectionId; // Asignar el ID a la sección
+  mainDiv.classList.add("div-conocimientos")
 
-  // Crear el contenedor del sello
-  const selloContainer = document.createElement("div");
-  selloContainer.classList.add("sello-container");
+  const table1 = document.createElement("table")
+  table1.classList.add("sello-container", "sello-table");
+  const tr1 = document.createElement("tr")
+  const td1 = document.createElement("td")
 
   // Crear la imagen del sello
   const selloImg = document.createElement("img");
@@ -43,18 +45,20 @@ function generateProgressTable(data, sectionTitle, sectionId) {
   const selloSpan = document.createElement("span");
   selloSpan.textContent = sectionTitle;
 
-  // Agregar la imagen y el span al contenedor del sello
-  selloContainer.appendChild(selloImg);
-  selloContainer.appendChild(selloSpan);
-
-  // Agregar el contenedor del sello a la sección
-  section.appendChild(selloContainer);
+  td1.appendChild(selloImg);
+  td1.appendChild(selloSpan);
+  tr1.appendChild(td1);
+  table1.appendChild(tr1)
+  mainDiv.appendChild(table1);
 
   const table = document.createElement("table");
-  table.classList.add("iconpresentator");
+  table.classList.add("icon-presentator", "table-icon");
 
   data.forEach((item) => {
-    const trInside = document.createElement("tr");
+    const tr = document.createElement("tr");
+    tr.classList.add("tr-icon");
+    const td = document.createElement("td")
+    td.classList.add("td-icon");
     const progressCell = document.createElement("progress-cell");
     progressCell.setAttribute("img-src", item["img-src"]);
     progressCell.setAttribute("label", item.label);
@@ -62,16 +66,17 @@ function generateProgressTable(data, sectionTitle, sectionId) {
     if (item.bodyText) {
       progressCell.setAttribute("bodytext", item.bodyText);
     }
-    trInside.appendChild(progressCell);
-    table.appendChild(trInside);
+    td.appendChild(progressCell)
+    tr.appendChild(td);
+    table.appendChild(tr);
   });
 
-  section.appendChild(table);
-  return section;
+  mainDiv.appendChild(table);
+  return mainDiv;
 }
 
 // Generar la tabla
-const analisisSection = generateProgressTable(dataAnalisis, "Análisis", "analisis-datos");
+const analisisSection = generateProgressTable(dataAnalisis, "Análisis de datos", "analisis-datos");
 const ofimaticaSection = generateProgressTable(dataOfimatica, "Ofimática", "ofimatica");
 const disenoSection = generateProgressTable(dataDiseno, "Diseño gráfico y de video", "diseno");
 const interfazSection = generateProgressTable(dataInterfaz, "Interfaces (Frontend)", "interfaz");

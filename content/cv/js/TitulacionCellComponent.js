@@ -26,12 +26,10 @@ class TitulacionCell extends HTMLElement {
 customElements.define("titulacion-cell", TitulacionCell);
 
 // Función para generar la tabla automáticamente
-function generateTitulacionTable(data, sectionTitle, sectionId) {
+function generateTitulacionTable(data, sectionId) {
   const section = document.createElement("section");
   section.id = sectionId; // Asignar el ID a la sección
-  const h2 = document.createElement("h2");
-  h2.textContent = sectionTitle;
-  section.appendChild(h2);
+
 
   const table = document.createElement("table");
   data.forEach((item) => {
@@ -47,7 +45,7 @@ function generateTitulacionTable(data, sectionTitle, sectionId) {
 }
 
 // Generar la tabla
-const titulacionSection = generateTitulacionTable(dataTitulacion, "Titulación", "titulacion");
+const titulacionSection = generateTitulacionTable(dataTitulacion, "titulacion");
 
 // Insertar la tabla en el body
 document.addEventListener('DOMContentLoaded', () => {

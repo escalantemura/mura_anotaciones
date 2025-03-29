@@ -1,0 +1,42 @@
+.icon-presentator .main-table {
+  padding: 20px;
+}
+
+.icon-presentator .icon-presentator-maintr {
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  vertical-align: top;
+}
+
+.div-conocimientos {
+  /* border: #534caf 1px solid; Remove the border*/
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-presentator .table-icon {
+  text-align: center;
+  border-spacing: 10px;
+  border-collapse: separate;
+  justify-content: space-around;
+  background: #dfdede;
+  border-radius: 10px;
+  padding: 80px 5px 5px;
+  margin: -90px 10px 0;
+}
+
+/* Estilo para las filas */
+.icon-presentator .tr-icon {
+  display: table-row; /* Comportamiento normal de las filas */
+  justify-content: space-between;
+}
+
+/* Estilo para las celdas */
+.icon-presentator .td-icon {
+  text-align: center; /* Centra el contenido horizontalmente */
+  vertical-align: middle; /* Centra el contenido verticalmente */
+  padding: 10px;
+}

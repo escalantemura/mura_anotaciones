@@ -1,38 +1,31 @@
-section h2 {
-  font-size: 12px;
-  text-align: center;
-  min-height: 70px;
-}
-
-.td-content {
+.icon-content {
   display: flex;
   height: 60px;
   width: 90px;
   padding-bottom: 20px;
 }
 
-.td-content-text {
+.icon-content-text {
   width: 100%;
   height: 100%;
   gap: 1px;
 }
 
-.td-content img {
+.icon-content img {
   padding-top: 12px;
-  margin: 0 auto; /* Centra la imagen horizontalmente */
   width: 30px; /* Ancho predeterminado */
   height: 30px; /* Alto predeterminado */
   object-fit: contain; /* Ajusta la imagen al tamaño sin deformarla */
 }
 
-.td-content h3 {
+.icon-content h3 {
   text-align: center;
   font-size: 0.7rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.td-content p {
+.icon-content p {
   font-weight: normal;
   font-style: italic;
   font-size: 0.5rem;
