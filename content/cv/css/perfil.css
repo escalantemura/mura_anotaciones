@@ -1,8 +1,7 @@
 .custom-table-container {
-  width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
-  max-width: 1000px; /* Ancho máximo del contenedor */
+  width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+  height: 100%;
   margin: 20px auto; /* Centra el contenedor horizontalmente */
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative; /* Necesario para posicionar el background */
@@ -21,12 +20,13 @@
   background-size: cover;
   background-position: center;
   opacity: 0.3; /* Ajusta la opacidad del difuminado */
-  filter: blur(5px); /* Ajusta el nivel de desenfoque */
-  z-index: -1; /* Coloca el fondo detrás del contenido */
+  filter: blur(20px); /* Ajusta el nivel de desenfoque */
+  z-index: 0; /* Coloca el fondo detrás del contenido */
 }
 
 .custom-table {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
   background-color: transparent; /* Hace que el fondo de la tabla sea transparente */
 }
@@ -41,13 +41,22 @@
   width: 50%; /* Ajusta el ancho de la columna de texto */
 }
 
+.text-column h2 {
+  font-size: 2.2rem;
+}
+
+.text-column p {
+  font-size: 1.2rem;
+}
+
 .image-column {
-  width: 50%; /* Ajusta el ancho de la columna de imagen */
+  width: 30%; /* Ajusta el ancho de la columna de imagen */
+  height: 100%;
 }
 
 .image-wrapper {
   width: 100%;
-  height: 300px; /* Ajusta la altura del rectángulo vertical */
+  height: 100%; /* Ajusta la altura del rectángulo vertical */
   position: relative;
   overflow: hidden; /* Oculta el contenido que se desborda */
   border-radius: 10px;
@@ -57,41 +66,5 @@
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-  transition: transform 0.3s ease; /* Añade una transición suave al hacer hover */
-}
-
-.image-wrapper:hover img {
-  transform: scale(1.1); /* Efecto de zoom al hacer hover */
-}
-
-/* Efecto de difuminado */
-.image-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5)); /* Difuminado vertical */
-  pointer-events: none; /* Permite que los eventos del ratón pasen a través del difuminado */
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .custom-table-container {
-    width: 95%;
-    padding: 10px;
-  }
-  .custom-table td {
-    display: block;
-    width: 100%;
-    padding: 10px;
-  }
-  .text-column, .image-column {
-    width: 100%;
-  }
-  .image-wrapper {
-    height: 200px;
-  }
+  object-fit: none;
 }

@@ -1,7 +1,7 @@
 export const dataAnalisis = [
   { "img-src": "Mathematica-logo.png", label: "Wolfram Mathematica", level: "level-2" },
   { "img-src": "PowerBI-Logo.svg", label: "Power BI", level: "level-2" },
-  { "img-src": "C++_Logo.svg", label: "R", level: "level-2" },
+  { "img-src": "Rstudio-logo.svg", label: "R Studio", level: "level-2" },
 ];
 
 export const dataOfimatica = [

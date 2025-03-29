@@ -10,12 +10,68 @@
 body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 16px;
-  width: 100%;
-  horiz-align: center;
+  display: flex; /* Activa flexbox */
+  justify-content: center; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  min-height: 100vh; /* Altura mínima del body, ocupa toda la pantalla */
+}
+
+.fixed-container {
+  width: 1000px; /* Ancho fijo para el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'JetBrains Mono', monospace;
   font-weight: bold;
+}
+
+.main-table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.icon-presentator.main-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-table-first-row {
+  display: flex;
+  width: 100%;
+  flex-grow: 1; /* Permite que la primera fila crezca */
+}
+
+.main-table-first-row > td {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.main-table-second-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.main-table-second-row > td {
+  width: 20%;
+}
+
+.titulacion-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-table-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

@@ -8,51 +8,55 @@
   <script defer src="js/TitulacionCellComponent.js" type="module"></script>
 </head>
 <body>
+<div class="fixed-container">
 
-<table class="icon-presentator main-table">
-  <tr>
-    <td>
-      <div id="titulacion-container"></div>
-    </td>
+  <div class="main-table-container">
+    <table class="icon-presentator main-table">
+      <tr class="main-table-first-row">
+        <td class="titulacion-cell">
+          <div id="titulacion-container"></div>
+        </td>
 
-    <td>
-      <div class="custom-table-container">
-        <table class="custom-table">
-          <tr>
-            <td class="text-column">
-              <h2>Título del Contenido 1</h2>
-              <p>Descripción del contenido 1. Este es un ejemplo de texto que puede ir en la columna de texto. Puedes
-                añadir más texto aquí.</p>
-            </td>
-            <td class="image-column">
-              <div class="image-wrapper">
-                <img alt="Imagen" src="img/imagen.jpg">
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
+        <td class="custom-table-cell">
+          <div class="custom-table-container">
+            <table class="custom-table">
+              <tr>
+                <td class="text-column">
+                  <h2>Escalante Mura</h2>
+                  <p>Descripción del contenido 1. Este es un ejemplo de texto que puede ir en la columna de texto.
+                    Puedes
+                    añadir más texto aquí.</p>
+                </td>
+                <td class="image-column">
+                  <div class="image-wrapper">
+                    <img alt="Imagen" src="img/imagen.jpg">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
 
-  <tr class="icon-presentator-maintr">
-    <td>
-      <div id="backend-container"></div>
-    </td>
-    <td>
-      <div id="interfaz-container"></div>
-    </td>
-    <td>
-      <div id="ofimatica-container"></div>
-    </td>
-    <td>
-      <div id="diseno-container"></div>
-    </td>
-    <td>
-      <div id="analisis-container"></div>
-    </td>
-  </tr>
-</table>
-
+      <tr class="icon-presentator-maintr main-table-second-row">
+        <td>
+          <div id="backend-container"></div>
+        </td>
+        <td>
+          <div id="interfaz-container"></div>
+        </td>
+        <td>
+          <div id="ofimatica-container"></div>
+        </td>
+        <td>
+          <div id="diseno-container"></div>
+        </td>
+        <td>
+          <div id="analisis-container"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
 </body>
 </html>
