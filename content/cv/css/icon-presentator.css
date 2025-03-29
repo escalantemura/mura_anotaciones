@@ -1,5 +1,8 @@
-.icon-presentator .main-table {
-  padding: 20px;
+.icon-presentator.main-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
 }
 
 .icon-presentator .icon-presentator-maintr {

@@ -1,0 +1,46 @@
+.titulacion-card {
+  display: flex; /* Activa Flexbox para organizar los hijos en fila */
+  align-items: center; /* Alinea verticalmente el contenido */
+  gap: 20px; /* Espaciado entre el logo y el contenido textual */
+  padding: 20px; /* Espaciado interno del contenedor */
+  margin: 20px auto; /* Margen superior/inferior y centra horizontalmente */
+  max-width: 600px; /* Ancho máximo del contenedor */
+  width: 100%; /* Ancho adaptable al contenedor padre */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 12px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+/* Sección izquierda: Logo */
+.titulacion-logo {
+  flex: 0 0 20%;
+  text-align: center; /* Centra el logo horizontalmente */
+}
+
+.titulacion-logo img {
+  width: 100%; /* El logo ocupa el ancho completo de su contenedor */
+  max-width: 60px; /* Ancho máximo del logo */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  display: block; /* Elimina márgenes/residuos extra */
+  margin: 0 auto; /* Centra el logo al interior del contenedor */
+}
+
+/* Sección derecha: Contenido textual */
+.titulacion-contenido {
+  flex: 1; /* El contenido textual ocupa el resto del espacio */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.titulacion-contenido h2 {
+  font-size: 1.5rem; /* Tamaño más grande para el título */
+  color: #333333; /* Color oscuro para texto nítido */
+  margin: 0; /* Elimina márgenes extras */
+  font-weight: bold; /* Título en negrita */
+}
+
+.titulacion-contenido p {
+  font-size: 1rem; /* Tamaño estándar para el texto descriptivo */
+  color: #666666; /* Color gris para contraste */
+  margin-top: 8px; /* Espaciado superior entre el título y el párrafo */
+}

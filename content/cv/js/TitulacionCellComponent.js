@@ -7,17 +7,15 @@ class TitulacionCell extends HTMLElement {
     const university = this.getAttribute("university");
 
     this.innerHTML = `
-      <table class="titulacion">
-        <tr>
-          <td class="titulacion-logo">
-            <img alt="${title} Logo" src="img/${logoSrc}">
-          </td>
-          <td class="titulacion-contenido">
-            <h2>${title}</h2>
-            <p>${university}</p>
-          </td>
-        </tr>
-      </table>
+    <div class="titulacion-card">
+      <div class="titulacion-logo">
+      <img alt="${title} Logo" src="img/${logoSrc}">
+      </div>
+    <div class="titulacion-contenido">
+      <h2>${title}</h2>
+      <p>${university}</p>
+    </div>
+  </div>
     `;
   }
 }
@@ -32,6 +30,7 @@ function generateTitulacionTable(data, sectionId) {
 
 
   const table = document.createElement("table");
+
   data.forEach((item) => {
     const titulacionCell = document.createElement("titulacion-cell");
     titulacionCell.setAttribute("logo-src", item["logo-src"]);

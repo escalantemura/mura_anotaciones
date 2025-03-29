@@ -1,3 +1,10 @@
+.custom-table-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
+}
+
 .custom-table-container {
   width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
   height: 100%;
