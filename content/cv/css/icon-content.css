@@ -1,6 +1,6 @@
 .icon-content {
   display: flex;
-  height: 60px;
+  height: auto;
   width: 90px;
   padding-bottom: 20px;
 }
@@ -13,7 +13,7 @@
 
 .icon-content img {
   padding-top: 12px;
-  width: 30px; /* Ancho predeterminado */
+  width: 100%; /* Ancho predeterminado */
   height: 30px; /* Alto predeterminado */
   object-fit: contain; /* Ajusta la imagen al tamaño sin deformarla */
 }

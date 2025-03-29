@@ -9,8 +9,7 @@
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   text-align: center;
-  width: 200px;
-  height: 200px;
+  width: 110%;
 }
 
 .sello-container img {

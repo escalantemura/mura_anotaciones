@@ -1,4 +1,4 @@
-.icon-presentator.main-table {
+.icon-presentator .second-table {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 .div-conocimientos {
-  /* border: #534caf 1px solid; Remove the border*/
+   border: #534caf 1px solid;
   display: flex; /* Make it a flex container */
   justify-content: center; /* Center items horizontally */
   flex-direction: column;
