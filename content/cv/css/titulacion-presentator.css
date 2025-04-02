@@ -1,11 +1,18 @@
+.titulacion-row-td{
+  justify-content: space-between;
+  width: 150%;
+  height: 100%;
+}
+
 .titulacion-card {
   display: flex; /* Activa Flexbox para organizar los hijos en fila */
   align-items: center; /* Alinea verticalmente el contenido */
   gap: 20px; /* Espaciado entre el logo y el contenido textual */
-  padding: 20px; /* Espaciado interno del contenedor */
   margin: 20px auto; /* Margen superior/inferior y centra horizontalmente */
+  padding: 10px; /* Espaciado interno del contenedor */
   max-width: 600px; /* Ancho máximo del contenedor */
   width: 100%; /* Ancho adaptable al contenedor padre */
+  height: 100%;
   background-color: #ffffff; /* Fondo blanco */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
   border-radius: 12px; /* Bordes redondeados */
@@ -33,14 +40,14 @@
 }
 
 .titulacion-contenido h2 {
-  font-size: 1.5rem; /* Tamaño más grande para el título */
+  font-size: 1.3rem; /* Tamaño más grande para el título */
   color: #333333; /* Color oscuro para texto nítido */
   margin: 0; /* Elimina márgenes extras */
   font-weight: bold; /* Título en negrita */
 }
 
 .titulacion-contenido p {
-  font-size: 1rem; /* Tamaño estándar para el texto descriptivo */
+  font-size: 0.8rem; /* Tamaño estándar para el texto descriptivo */
   color: #666666; /* Color gris para contraste */
   margin-top: 8px; /* Espaciado superior entre el título y el párrafo */
 }

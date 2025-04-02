@@ -1,5 +1,3 @@
-/* css/style.css */
-/* /Users/mura/PhpstormProjects/mura_anotaciones/css/img/style.css */
 @import "../../../css/html5boilerplate.css";
 @import "progress-bar.css";
 @import "icon-content.css";
@@ -38,20 +36,20 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between; /* Alineación horizontal */
   align-items: center; /* Alineación vertical */
   box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  border: #4c51af 1px solid;
 }
 
-.second-table {
-  border: #4caf50 1px solid;
+.main-table-tr {
+  display: flex;
   width: 100%;
-  display: flex; /* Activa flexbox */
-  justify-content: space-between; /* Alineación horizontal */
-  align-items: center; /* Alineación vertical */
+  flex-grow: 1; /* Permite que la primera fila crezca */
   box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
 }
 
+.icon-table {
+  width: 100%;
+}
 
-.main-table-container {
+.table-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -59,148 +57,3 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
 }
 
-.main-table-first-row {
-  display: flex;
-  width: 100%;
-  flex-grow: 1; /* Permite que la primera fila crezca */
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-}
-
-.main-table-first-row > td {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-}
-
-.main-table-second-row {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-}
-
-.main-table-second-row > td {
-  width: 100%;
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-}
-
-/* css/print.css */
-/* Estilos para impresión */
-@media print {
-  body {
-    display: block;
-    min-height: auto;
-    margin: 0;
-    padding: 0;
-    font-size: 10pt;
-    width: 21cm; /* Ancho de una página A4 */
-    height: 29.7cm; /* Alto de una página A4 */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .fixed-container {
-    width: 100%; /* Ocupa todo el ancho disponible en impresión */
-    padding: 20px; /* Mantiene el padding */
-    background-color: #ffffff; /* Mantiene el fondo */
-    border-radius: 10px; /* Mantiene los bordes redondeados */
-    margin: 0;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-    max-width: 19cm; /* Ajusta el ancho máximo para dejar márgenes */
-    max-height: 27.7cm; /* Ajusta la altura máxima para dejar márgenes */
-  }
-
-  .main-table-container {
-    max-width: 100%;
-    padding: 0 10px;
-    margin: 0 auto;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .icon-presentator.main-table {
-    display: flex; /* Mantiene el display flex */
-    flex-direction: column; /* Mantiene la dirección en columna */
-    width: 100%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .main-table-first-row,
-  .main-table-second-row {
-    display: flex; /* Mantiene el display flex */
-    width: 100%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .main-table-first-row > td {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .main-table-second-row > td {
-    width: 20%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .titulacion-cell,
-  .custom-table-cell {
-    display: flex; /* Mantiene el display flex */
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .custom-table-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Mantiene la sombra */
-    border-radius: 10px; /* Mantiene los bordes redondeados */
-    margin: 20px auto; /* Mantiene el margen */
-    padding: 20px; /* Mantiene el padding */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-    width: 100%;
-  }
-
-  .custom-table-container::before {
-    opacity: 0.3; /* Mantiene la opacidad del difuminado */
-    filter: blur(20px); /* Mantiene el desenfoque */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .custom-table {
-    width: 100%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .custom-table td {
-    padding: 20px; /* Mantiene el padding */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .image-wrapper {
-    height: 300px; /* Mantiene la altura */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  /* Ajustes para el texto */
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  p {
-    page-break-inside: avoid;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-
-  table {
-    page-break-inside: avoid;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
-  }
-}

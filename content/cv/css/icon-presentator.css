@@ -1,4 +1,16 @@
-.icon-presentator .second-table {
+.icon-table-tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
+}
+
+.icon-table-tr > td {
+  width: 100%;
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
+}
+
+.icon-presentator .icon-table {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,7 +25,6 @@
 }
 
 .div-conocimientos {
-   border: #534caf 1px solid;
   display: flex; /* Make it a flex container */
   justify-content: center; /* Center items horizontally */
   flex-direction: column;

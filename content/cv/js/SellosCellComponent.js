@@ -1,4 +1,4 @@
-import {dataAnalisis, dataBackend, dataDiseno, dataInterfaz, dataOfimatica} from './DataForTables.js';
+import {dataAnalisis, dataBackend, dataDiseno, dataInterfaz, dataOfimatica} from './DataForSellos.js';
 
 class ProgressCell extends HTMLElement {
   connectedCallback() {
