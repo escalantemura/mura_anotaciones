@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../../../fonts/JetBrainsMono-2/JetBrainsMono-Regular.ttf') format('ttf');
+  src: url('../../../../fonts/JetBrainsMono-2/JetBrainsMono-Regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../../../fonts/JetBrainsMono-2/JetBrainsMono-Italic.ttf') format('ttf');
+  src: url('../../../../fonts/JetBrainsMono-2/JetBrainsMono-Italic.ttf') format('ttf');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../../../fonts/JetBrainsMono-2/JetBrainsMono-Bold.ttf') format('ttf');
+  src: url('../../../../fonts/JetBrainsMono-2/JetBrainsMono-Bold.ttf') format('ttf');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
